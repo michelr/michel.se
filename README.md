@@ -1,2 +1,2 @@
 # michel.se
-My cv and portfolio site
+My freelancer/consultant site built with Python/Flask deployed as a Lambda in AWS with Zappa
