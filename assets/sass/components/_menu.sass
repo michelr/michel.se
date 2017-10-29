@@ -1,0 +1,123 @@
+/* Menu */
+.menu
+  position: fixed
+  width: 100%
+  height: 100%
+  left: -100%
+  top: 0
+  background: #000
+  z-index: 98
+  overflow-y: auto
+  overflow-x: hidden
+  transition: all 0.4s $ease-in-out-quart
+  &.show
+    left: 0
+  .menu-links-ul
+    margin-top: 60px
+    margin-left: 60px
+    list-style: none
+    @media (max-width: 767px)
+      margin-left: 10px
+    .menu-links-li
+      margin: 20px
+      font-family: 'Poppins', sans-serif
+      font-weight: 600
+      font-size: 46px
+      color: #fff
+      position: relative
+      float: left
+      clear: both
+      @media (max-width: 767px)
+        font-size: 36px
+      @media (max-width: 479px)
+        font-size: 26px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 100%
+        bottom: -40px
+        background-color: #fff
+        transform: translate3d(-20px, -20px, 0px)
+        transition: all .5s ease
+      &:hover
+        &:before
+          right: -50px
+          transition: right 0.3s cubic-bezier(0.77, 0, 0.175, 1)
+        .menu-links-a
+          display: inline-block
+          position: relative
+          color: #0d0d0d
+      .menu-links-a
+        transition: color 0.2s ease-in-out
+/* Menu overlay */
+.menu-mask
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99
+  background: #fff
+  width: 0
+  height: 100%
+  transition: all 0.4s $ease-in-out-quart
+  &.mask-center
+    left: 0
+    width: 100%
+  &.mask-right
+    left: 100%
+    width: 0
+/* Show menu button */
+.show-menu-button
+  position: fixed
+  z-index: 100
+  top: 25px
+  right: 25px
+  width: 50px
+  height: 50px
+  cursor: pointer
+  .lines
+    display: block
+    top: 50%
+    left: 10px
+    margin-top: -2px
+    width: 30px
+    height: 2px
+    background-color: #fff
+    border-radius: 4px
+    position: absolute
+    transition: all .5s ease
+    &::before, &::after
+      height: 2px
+      background-color: #fff
+      border-radius: 4px
+      position: absolute
+      transition: all .5s ease
+    &::before, &::after
+      content: ""
+      display: block
+    &::before
+      top: -9px
+      width: 26px
+      margin-left: 4px
+    &::after
+      bottom: -9px
+      width: 20px
+      margin-left: 10px
+  &:hover .lines
+    &::before, &::after
+      width: 30px
+      margin-left: 0
+  &.active .lines
+    transform: rotate(225deg)
+    transition-delay: 0.12s
+    &::before
+      top: 0
+      opacity: 0
+      width: 30px
+      margin-left: 0
+    &::after
+      bottom: 0
+      width: 30px
+      margin-left: 0
+      transform: rotate(-90deg)

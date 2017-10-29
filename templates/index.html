@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block title %}Michel Radosavljevic » Freelance developer and BI/Analytics junkie{% endblock %}
+{% block body %}
+<!-- First section -->
+    <div class="section section-1">
+        <!-- Home section -->
+        <div class="section-home">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <h1>
+                            <span class="slide-anim" data-anim-delay="1"
+                                  data-anim-duration="500">Hello, I am Michel</span>
+                        </h1>
+                        <h3>
+                            <span class="slide-anim" data-anim-delay="2" data-anim-duration="500">Developer and BI/Analytics junkie</span>
+                            <br><span class="slide-anim" data-anim-delay="3" data-anim-duration="500">in a serverless world</span></h3>
+                        <hr class="fadeIn-anim" data-anim-delay="3" data-anim-duration="1000">
+                        <p class="fadeIn-anim" data-anim-delay="4" data-anim-duration="700">Always looking for new interesting freelance projects!</p>
+                        <!-- Button block -->
+                        <div class="button-block">
+                            <a href="#contact" class="btn-black fadeIn-anim" data-anim-delay="5"
+                               data-anim-duration="700">Hire me</a>
+                        </div><!-- End button block -->
+                    </div><!-- End col -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </div><!-- End home section -->
+    </div><!-- End first section -->
+    <!-- Second section -->
+    <div class="section section-2">
+        <!-- About section -->
+        <div class="section-about">
+            <div class="container">
+                <div class="row">
+                    <!-- Person image -->
+                    <div class="person-img col-md-4">
+                        <img class="slide-anim" data-anim-delay="2" data-anim-duration="500" src="{{ url_for('static', filename='img/me.jpg') }}" alt="person">
+                    </div><!-- End col -->
+                    <!-- Person about -->
+                    <div class="person-about col-md-6">
+                        <h1><span class="slide-anim" data-anim-delay="3" data-anim-duration="500">About me</span></h1>
+                        <div class="person-about-text">
+                            <p class="fadeIn-anim" data-anim-delay="4" data-anim-duration="700">
+                                I've been a code monkey since 2002 working at digital agencies such as Framfab/LBi, Knowit, Ottoboni, and Creuna. During the last three years, I've been part of the startup scene as a CTO (Toborrow) and up until recently as Head of Product (APPRL).
+                                <br> 
+                                I've always enjoyed creating stuff with code but have also become fond of digital analytics and BI, especially visualizations of data and to have a truly data-driven mindset.
+                            </p>
+                        </div>
+                        <!-- Social links -->
+                        <ul class="inline-list personal-about-socials fadeIn-anim" data-anim-delay="6" data-anim-duration="1000">
+                            <li><span>Follow me: </span></li>
+                            <li><a href="https://github.com/michelr"><i class="demo-icon icon-github-circled">&#xf09b;</i></a></li>
+                            <li><a href="https://www.linkedin.com/in/michelradosavljevic"><i class="demo-icon icon-linkedin">&#xf0e1;</i></a></li>
+                            <li><a href="https://twitter.com/michelr79"><i class="demo-icon icon-twitter">&#xf099;</i></a></li>
+                        </ul><!-- End social links -->
+                    </div><!-- End col -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </div><!-- End about section -->
+    </div><!-- End second section -->
+    <!-- Third section -->
+    <div class="section section-3">
+        <!-- Services section -->
+        <div class="section-services">
+            <div class="container">
+                <!-- Section header -->
+                <div class="row text-center">
+                    <h1><span class="slide-anim" data-anim-delay="1" data-anim-duration="500">What I Do?</span></h1>
+                </div><!-- End section header -->
+                <div class="row text-center-xs">
+                    <!-- Service cards -->
+                    <div class="service-cards">
+                        <!-- Service card -->
+                        <div class="col-md-4 service-card">
+                            <img class="service-icon fadeIn-anim" src="{{ url_for('static', filename='img/development.png') }}" alt="service" data-anim-delay="2"
+                                 data-anim-duration="700">
+                            <h3 class="service-header"><span class="slide-anim" data-anim-delay="3" data-anim-duration="500">Development</span>
+                            </h3>
+                            <p class="service-text fadeIn-anim" data-anim-delay="4" data-anim-duration="600">
+                                Experienced in MVC frameworks like ASP.NET MVC (C#) and Django (Python). Done n thousands of queries to PostgreSQL, MSSQL, MongoDB and DynamoDB. Have put a lot of stuff on RabbitMQ and Redis queues. Will definitely throw stuff on Kafka and Kinesis streams...
+                            </p>
+                        </div><!-- End service card -->
+                        <!-- Service card -->
+                        <div class="col-md-4 service-card">
+                            <img class="service-icon fadeIn-anim" src="{{ url_for('static', filename='img/analytics.png') }}" alt="service" data-anim-delay="7"
+                                 data-anim-duration="700">
+                            <h3 class="service-header"><span class="slide-anim" data-anim-delay="8" data-anim-duration="500">Analytics & BI</span>
+                            </h3>
+                            <p class="service-text fadeIn-anim" data-anim-delay="9" data-anim-duration="600">
+                                Always ready to set up custom GTM tracking or GA reporting, create analytics pipelines or render visualizations with Tableau or Klipfolio
+                            </p>
+                        </div><!-- End service card -->
+                        <!-- Service card -->
+                        <div class="col-md-4 service-card">
+                            <img class="service-icon fadeIn-anim" src="{{ url_for('static', filename='img/cloud-computing.png') }}" alt="service" data-anim-delay="12"
+                                 data-anim-duration="700">
+                            <h3 class="service-header"><span class="slide-anim" data-anim-delay="13" data-anim-duration="500">Cloud computing</span>
+                            </h3>
+                            <p class="service-text fadeIn-anim" data-anim-delay="14" data-anim-duration="600">
+                                Working with AWS, GCP or Azure to build dynamic, scalable architectures with a serverless mindset. Hey, this site is built with AWS Lambda and API gateway!
+                            </p>
+                        </div><!-- End service card -->
+                    </div><!-- End service cards -->
+                </div><!-- End row -->
+                <div class="row text-center">
+                    <!-- Button block -->
+                    <div class="button-block">
+                        <a href="#contact" class="btn-black fadeIn-anim" data-anim-delay="16" data-anim-duration="700">Hire me</a>
+                    </div><!-- ENd button block -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </div><!-- End services section -->
+    </div><!-- End third section -->
+    
+    <div class="section section-4">
+        <!-- Contact section -->
+        <div class="section-contact">
+            <div class="container">
+                <!-- Section header -->
+                <div class="row text-center">
+                    <h1><span class="slide-anim" data-anim-delay="1" data-anim-duration="500">Contact me</span></h1>
+                </div><!-- End section header -->
+                <!-- Contacts row -->
+                <div class="row text-center">
+                    <!-- Contact block -->
+                    <div class="col-sm-offset-2 col-sm-4 contact-block">
+                        <div class="contact-icon fadeIn-anim" data-anim-delay="2" data-anim-duration="700">
+                            <i class="demo-icon icon-mobile">&#xe800;</i>
+                        </div>
+                        <div class="contact-text">
+                            <p><span class="slide-anim" data-anim-delay="3" data-anim-duration="500">Phone</span></p>
+                            <p class="fadeIn-anim" data-anim-delay="4" data-anim-duration="700">
+                              <a href="tel:+46 709 75 73 83">+46 709 75 73 83</a>
+                            </p>
+                        </div>
+                    </div><!-- End contact block -->
+                    <!-- Contact block -->
+                    <div class="col-sm-4 contact-block">
+                        <div class="contact-icon fadeIn-anim" data-anim-delay="7" data-anim-duration="700">
+                            <i class="demo-icon icon-mail">&#xe802;</i>
+                        </div>
+                        <div class="contact-text">
+                            <p><span class="slide-anim" data-anim-delay="8" data-anim-duration="500">Mail</span></p>
+                            <p class="fadeIn-anim" data-anim-delay="9" data-anim-duration="700">
+                              <a href="mailto:mr@michel.se">mr@michel.se</a>
+                            </p>
+                        </div>
+                    </div><!-- End contact block -->
+                </div><!-- End contacts row -->
+            </div><!-- End container -->
+        </div><!-- End contact section -->
+    </div>
+
+{% endblock %}

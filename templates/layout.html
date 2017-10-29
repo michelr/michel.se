@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}Hello, I am Michel. Developer and BI/Analytics junkie. in a serverless world. Always looking for new interesting freelance projects!{% endblock %}">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KM8XGZT');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="icon" type="image/png" href="/static/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/static/icons/favicon-16x16.png" sizes="16x16" />
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets.css', v='c2df64fe01bb4a82ba97') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='c2df64fe01bb4a82ba97') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400%7CPoppins:600,900" rel="stylesheet">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KM8XGZT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Preloader -->
+    <div class="preloader-container">
+        <div class="loader"></div>
+    </div><!-- End preloader -->
+    
+    <!-- Background image -->
+    <div id="bg"></div>
+
+    <!-- Main section -->
+    <div id="main" class="fullpage">
+        {% block body %}{% endblock %}
+    </div><!-- End main section -->
+
+    <!-- Show menu button -->
+    <div class="show-menu-button">
+        <div class="lines"></div>
+    </div><!-- End show menu button -->
+    
+    <!-- Menu white overlay -->
+    <div class="menu-mask"></div>
+    <!-- Menu -->
+    <div class="menu">
+        <!-- Menu links -->
+        <ul class="menu-links-ul">
+            <li class="menu-links-li"><a class="menu-links-a" href="#home">Home</a></li>
+            <li class="menu-links-li"><a class="menu-links-a" href="#about">About me</a></li>
+            <li class="menu-links-li"><a class="menu-links-a" href="#services">Services</a></li>
+            <li class="menu-links-li"><a class="menu-links-a" href="#contact">Contact me</a></li>
+        </ul><!-- End menu links -->
+    </div><!-- End menu -->
+    <script src="{{ url_for('static', filename='assets.js') }}"></script>
+    
+    <script src="{{ url_for('static', filename='bundle.js', v='c2df64fe01bb4a82ba97') }}"></script>
+</body>
+</html>

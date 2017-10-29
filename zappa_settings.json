@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "eu-west-1",
+        "profile_name": "michel",
+        "project_name": "michel_se",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-michel-se",
+        "domain": "michel.se",
+        "exclude": ["assets", "node_modules", ".vscode", "package.json", "REDAME.md", "webpack.config.js", "LICENSE"]
+    }
+}

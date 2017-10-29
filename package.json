@@ -1,0 +1,41 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "My cv and portfolio site",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "favicons-webpack-plugin": "0.0.7",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.1.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "sync-exec": "^0.6.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.2"
+  },
+  "scripts": {
+    "watch": "webpack --watch --progress --profile --colors --display-error-details --display-cached",
+    "build": "NODE_ENV=dev webpack --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "NODE_ENV=production webpack --progress --profile --colors --display-error-details --display-cached --optimize-minimize",
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors --port 2992 --content-base static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelr/michel.se.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelr/michel.se/issues"
+  },
+  "homepage": "https://github.com/michelr/michel.se#readme"
+}

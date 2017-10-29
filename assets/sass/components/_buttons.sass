@@ -1,0 +1,35 @@
+.btn-black
+  position: relative
+  display: inline-block
+  padding: 15px 30px
+  border: 2px solid #fff
+  color: #fff
+  background: transparent
+  text-transform: uppercase
+  font-family: 'Lato', sans-serif
+  font-weight: 900
+  letter-spacing: .3em
+  font-size: 1.1rem
+  overflow: hidden
+  transition: all .5s ease
+  text-decoration: none
+  outline: 0
+  &:hover, &:focus, &:active, &.is-active, &.active
+    text-decoration: none !important
+    outline: 0 !important
+  &:hover, &:active
+    background-color: #fff
+    color: #000
+  &.invert
+    background-color: #fff
+    color: #000
+    &:hover, &:active
+      background: transparent
+      color: #fff
+
+.button-block
+  margin-top: 40px
+  a.btn-black
+    margin-right: 30px
+    &:last-of-type
+      margin-right: 0 !important

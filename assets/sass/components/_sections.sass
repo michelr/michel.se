@@ -1,0 +1,170 @@
+=before()
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: -2
+
+=after()
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  background: url('../img/noise.gif') repeat
+  opacity: .15
+  z-index: -1
+
+#main
+  .section-1
+    &:before
+      +before()
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%)
+    &:after
+      +after()
+  .section-2
+    &:before
+      +before()
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%)
+    &:after
+      +after()
+  .section-3
+    &:before
+      +before()
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%)
+    &:after
+      +after()
+  .section-4
+    &:before
+      +before()
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%)
+    &:after
+      +after()
+  .section-5
+    &:before
+      +before()
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%)
+    &:after
+      +after()
+
+/* About section */
+.section-about
+  .person-img
+    img
+      filter: grayscale(1)
+      width: 100%
+      height: auto
+  .person-about
+    margin-top: 20px
+    @media (max-width: 767px)
+      margin: auto
+    .person-about-text
+      margin-top: 40px
+    ul.personal-about-socials
+      span
+        padding-left: 5px
+        padding-right: 5px
+        background-color: #fff
+        color: #000
+      a
+        font-size: 28px
+
+/* Services section */
+.section-services
+  .service-cards
+    margin-top: 80px
+    .service-icon
+      width: 128px
+      height: 128px
+    .service-header
+      margin-top: 40px
+      margin-bottom: 25px
+
+/* Portfolio section */
+.section-portfolio
+  .inline-list
+    margin: 10px 0 0 0
+  .portfolio-filters ul>li.portfolio-filter
+    position: relative
+    display: inline-block
+    padding: 10px 25px
+    border: 2px solid #fff
+    color: #fff
+    text-transform: uppercase
+    font-family: 'Lato', sans-serif
+    font-weight: 900
+    letter-spacing: .3em
+    font-size: 1.1rem
+    overflow: hidden
+    transition: all .5s ease
+    text-decoration: none
+    outline: 0
+    cursor: pointer
+    margin-top: 5px
+    margin-bottom: 5px
+    &:hover, &.active
+      background-color: #fff
+      color: #000
+  .portfolio-grid
+    margin-top: 40px
+    margin-left: auto
+    margin-right: auto
+  .grid-item
+    width: 285px
+    height: 185px
+    margin-bottom: 5px
+    overflow: hidden
+    float: left
+    position: relative
+    .portfolio-image
+      &:before
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: #000
+        z-index: 10
+        opacity: 0
+        transition: opacity .5s $ease-in-out-quart
+      &:after
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 11
+        opacity: 0
+        background: url("../img/plus.png") no-repeat center center
+        transition: opacity .5s $ease-in-out-quart .1s
+      &:hover
+        &:before, &:after
+          opacity: .9
+
+      img
+        width: 285px
+        height: 185px
+        transition: all 1s ease
+        filter: grayscale(1)
+        opacity: 0.9
+        cursor: pointer
+        position: relative
+
+/* Contact section */
+.section-contact
+  .mail-form
+    margin-top: 60px
+  .contact-block
+    margin-top: 40px
+    .contact-icon
+      display: inline-block
+      i
+        font-size: 84px
+        line-height: 100px
+        color: #fff
+        padding: 5px
